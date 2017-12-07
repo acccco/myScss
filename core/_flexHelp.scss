@@ -7,10 +7,10 @@
     justify-content: center;
     width: 100%;
     &.r-reverse {
-        flex-direction: row-reserve;
+        flex-direction: row-reverse;
     }
     &.c-reverse {
-        flex-direction: column-reserve;
+        flex-direction: column-reverse;
     }
     &.column {
         flex-direction: column;
@@ -24,10 +24,18 @@
     &.avg {
         justify-content: space-around;
     }
+    &.between {
+       justify-content: space-between;
+    }
+    &.evenly {
+       justify-content: space-evenly;
+    }
     &.wrap {
         flex-wrap: wrap;
     }
     >.x-flex-a {
-        flex: auto
+        flex: auto;
+        /* 需要设置一个宽度达到完全平分 */
+        width:10px;
     }
 }

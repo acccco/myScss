@@ -1,6 +1,9 @@
 @charset "utf-8";
 
 // 边框颜色
+
+/* 1到4个参数都可，和padding行为一致 */
+
 @mixin b-color($color...) {
     @if length($color)==1 {
         border-color: $color;
@@ -28,6 +31,9 @@
 }
 
 // 圆角
+
+/* 1到4个参数都可，从左上开始顺时针，未填写或null即不设置圆角 */
+
 @mixin b-radius($radius...) {
     @if length($radius)==1 {
         border-radius: $radius;
@@ -55,6 +61,7 @@
 }
 
 // 边框宽
+/* 1到4个参数都可，和padding行为一致 */
 @mixin b-width($width...) {
     @if length($width)==1 {
         border-width: $width;
