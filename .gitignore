@@ -1,0 +1,11 @@
+# Dependencies
+node_modules
+
+# Build files
+.tmp
+.map
+.css
+
+# IntelliJ project files
+*.iml
+.idea

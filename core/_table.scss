@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+caption {
+    padding-top: $table-cell-padding;
+    padding-bottom: $table-cell-padding;
+    text-align: left;
+}
+
+th {
+    text-align: left;
+}
+
+// 基本样式
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    // Cells
+    > thead,
+    > tbody,
+    > tfoot {
+        > tr {
+            > th,
+            > td {
+                padding: $table-cell-padding;
+                line-height: $line-height-base;
+                vertical-align: top;
+                border-top: 1px solid $table-border-color;
+            }
+        }
+    }
+    // 标题行下方加粗
+    > thead > tr > th {
+        vertical-align: bottom;
+        border-bottom: 2px solid $table-border-color;
+    }
+    // 去掉 thead 的上边框
+    > caption + thead,
+    > colgroup + thead,
+    > thead:first-child {
+        > tr:first-child {
+            > th,
+            > td {
+                border-top: 0;
+            }
+        }
+    }
+    // 使用 tbody 来区分不同的 tbody
+    > tbody + tbody {
+        border-top: 2px solid $table-border-color;
+    }
+
+    // 紧缩的表格
+    &.condensed {
+        > thead,
+        > tbody,
+        > tfoot {
+            > tr {
+                > th,
+                > td {
+                    padding: $table-condensed-cell-padding;
+                }
+            }
+        }
+    }
+
+    // 有边框的表格
+    &.bordered {
+        border: 1px solid $table-border-color;
+        > thead,
+        > tbody,
+        > tfoot {
+            > tr {
+                > th,
+                > td {
+                    border: 1px solid $table-border-color;
+                }
+            }
+        }
+        > thead > tr {
+            > th,
+            > td {
+                border-bottom-width: 2px;
+            }
+        }
+    }
+
+    // 隔行变色
+    &.striped {
+        > tbody > tr:nth-of-type(odd) {
+            background-color: $table-bg-accent;
+        }
+    }
+
+    // hover 变色
+    &.hover {
+        > tbody > tr:hover {
+            background-color: $table-bg-hover;
+        }
+    }
+
+}

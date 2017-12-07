@@ -1,0 +1,25 @@
+@charset 'utf-8';
+
+@mixin posi($posi...) {
+    @if length($posi)==1 {
+        $posi: (nth($posi, 1), null, null, null)
+    }
+    @else if length($posi)==2 {
+        $posi: (nth($posi, 1), nth($posi, 2), null, null)
+    }
+    @else if length($posi)==3 {
+        $posi: (nth($posi, 1), nth($posi, 2), nth($posi, 3), null)
+    }
+    @if nth($posi, 1)!=null {
+        top: nth($posi, 1)
+    }
+    @if nth($posi, 2)!=null {
+        left: nth($posi, 2)
+    }
+    @if nth($posi, 3)!=null {
+        bottom: nth($posi, 3)
+    }
+    @if nth($posi, 4)!=null {
+        right: nth($posi, 4)
+    }
+}

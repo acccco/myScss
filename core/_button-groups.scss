@@ -1,0 +1,169 @@
+@charset "utf-8";
+
+//
+// Button groups
+// --------------------------------------------------
+// 初始类直接使用，用于生成存放按钮的容器
+// Make the div behave like a button
+.btn-group,
+.btn-group-vertical {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle; // match .btn alignment given font-size hack above
+    >.btn {
+        position: relative;
+        float: left; // 使得 'active' 按钮显示最前
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            z-index: 2;
+        }
+    }
+}
+
+// 用于取消两个按钮放一起所带来的双 border 问题
+.btn-group {
+    .btn+.btn,
+    .btn+.btn-group,
+    .btn-group+.btn,
+    .btn-group+.btn-group {
+        margin-left: -1px;
+    }
+}
+
+// 用于取消中间按钮的圆角，使得显示为一个整体
+.btn-group>.btn:not(:first-child):not(:last-of-type) {
+    border-radius: 0;
+}
+
+// 取消第一个按钮的右侧圆角、取消向左偏移1px
+.btn-group>.btn:first-child:not(:last-of-type) {
+    margin-left: 0;
+    &:not(:last-of-type) {
+        @include b-radius(null, 0, 0, null);
+    }
+}
+
+// 取消最后一个按钮的左侧圆角
+.btn-group>.btn:last-of-type:not(:first-child) {
+    @include b-radius(0, null, null, 0);
+}
+
+// 修正 btn-group 中的 btn-group 表现于 btn 一样
+.btn-group>.btn-group {
+    float: left;
+}
+
+// 修正 btn-group 中的 btn-group 下的 btn 不应该有圆角（在中间时）
+.btn-group>.btn-group:not(:first-child):not(:last-of-type)>.btn {
+    border-radius: 0;
+}
+
+// 修正 btn-group 中的 btn-group 第一个中的最后一个 btn 不应该有右侧圆角
+.btn-group>.btn-group:first-child:not(:last-of-type) {
+    >.btn:last-of-type {
+        @include b-radius(null, 0, 0, null);
+    }
+}
+
+// 修正 btn-group 中的 btn-group 最后一个中的第一个 btn 不应该有左侧圆角
+.btn-group>.btn-group:last-of-type:not(:first-child)>.btn:first-child {
+    @include b-radius(0, null, null, 0);
+}
+
+// 规定按下的按钮的样式
+.btn-group.open {
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125); // Show no shadow for `.btn-link` since it has no other button styles.
+    &.btn-link {
+        box-shadow: none;
+    }
+}
+
+// Reposition the caret
+// 三角
+.btn .caret {
+    margin-left: 0;
+}
+
+// Carets in other button sizes
+// 三角大小
+.btn-lg .caret {
+    border-width: $caret-width-large $caret-width-large 0;
+    border-bottom-width: 0;
+}
+
+// 垂直按钮，默认一整排，宽度100%显示
+.btn-group-vertical {
+    display: block;
+    >.btn,
+    >.btn-group,
+    >.btn-group>.btn {
+        display: block;
+        float: none;
+        width: 100%;
+        max-width: 100%;
+    } // 清除浮动，使得父元素的高度正确
+    >.btn-group {
+        @include clearfix;
+        >.btn {
+            float: none;
+        }
+    }
+
+    >.btn+.btn,
+    >.btn+.btn-group,
+    >.btn-group+.btn,
+    >.btn-group+.btn-group {
+        margin-top: -1px;
+        margin-left: 0;
+    }
+}
+
+// 修正圆角问题
+.btn-group-vertical>.btn {
+    &:not(:first-child):not(:last-of-type) {
+        border-radius: 0;
+    }
+    &:first-child:not(:last-of-type) {
+        @include b-radius($btn-border-radius-base, $btn-border-radius-base, 0, 0);
+    }
+    &:last-of-type:not(:first-child) {
+        @include b-radius(0, 0, $btn-border-radius-base, $btn-border-radius-base);
+    }
+}
+
+.btn-group-vertical>.btn-group:not(:first-child):not(:last-of-type)>.btn {
+    border-radius: 0;
+}
+
+.btn-group-vertical>.btn-group:first-child:not(:last-of-type) {
+    >.btn:last-of-type {
+        @include b-radius(null, null, 0, 0);
+    }
+}
+
+.btn-group-vertical>.btn-group:last-of-type:not(:first-child)>.btn:first-child {
+    @include b-radius(0, 0, null, null);
+}
+
+// 两边对齐按钮
+.btn-group-justified {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+    >.btn,
+    >.btn-group {
+        float: none;
+        display: table-cell;
+        width: 1%;
+    }
+    >.btn-group .btn {
+        width: 100%;
+    }
+
+    >.btn-group {
+        left: auto;
+    }
+}

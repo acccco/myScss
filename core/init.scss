@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+@import "./mixin/mixin";
+
+@import "./variables";
+@import "./normalize";
+@import "./buttons";
+@import "./button-groups";
+@import "./table";
+
+@import "./flexHelp";
+@import "./useFullCalss";
+
+.radius {
+    border: 3px solid;
+    @include b-color(#ccc, #123);
+    @include size(100px, 200px);
+    background: #000;
+}
+
+.inline-test {
+    @include ib-size((10px 20px))
+}
+
+.p-test {
+    @include posi(10%, 20%);
+    @include b-radius(20px, 30px, 40px, 50px);
+}
+
+.bgv-test {
+    margin: 10px;
+}
+
+.inline-test2 {}

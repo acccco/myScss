@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+.x-flex-contain,
+.x-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    &.r-reverse {
+        flex-direction: row-reserve;
+    }
+    &.c-reverse {
+        flex-direction: column-reserve;
+    }
+    &.column {
+        flex-direction: column;
+    }
+    &.start {
+        justify-content: flex-start;
+    }
+    &.end {
+        justify-content: flex-end;
+    }
+    &.avg {
+        justify-content: space-around;
+    }
+    &.wrap {
+        flex-wrap: wrap;
+    }
+    >.x-flex-a {
+        flex: auto
+    }
+}
