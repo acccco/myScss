@@ -1,8 +1,8 @@
-@charset 'utf-8';
+@charset "utf-8";
 
 @mixin ib-size($padding, $line-height:$line-height-base, $font-size:$font-size-base) {
-	display:inline-block;
-    padding: $padding;
-    line-height: $line-height;
-    font-size: $font-size;
+  display: inline-block;
+  padding: $padding;
+  line-height: $line-height;
+  font-size: $font-size;
 }

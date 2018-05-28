@@ -2,15 +2,15 @@
 
 // 用于规定元素大小，便捷使用
 @mixin size($width, $height) {
-    width: $width;
-    height: $height;
+  width: $width;
+  height: $height;
 }
 
 @mixin square($size) {
-    @include size($size, $size);
+  @include size($size, $size);
 }
 
 @mixin circle($size) {
-    @include size($size, $size);
-    border-radius: $size/2;
+  @include size($size, $size);
+  border-radius: $size/2;
 }
