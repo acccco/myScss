@@ -5,7 +5,7 @@
  * 需要的更改颜色和 class 名称只需到 variables 文件中修改色值以及对应的名称即可
  */
 
-@mixin makeColorList($color-list) {
+@mixin make-color-list($color-list) {
   @each $name, $color in $color-list {
     .b-#{''+$name} {
       background-color: $color;

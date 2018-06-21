@@ -2,10 +2,13 @@
 
 @import "../core/init";
 
+$color-list: (blue: #5B88CB, grey: #CCCCCC, yellow: #FFCB00, pink: #FF8D8D, dark: #000, white: #fff);
+
 body {
   > div {
     @extend .m-t-10;
   }
+  @include make-color-list($color-list)
 }
 
 .h-50 {

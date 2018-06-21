@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 // 用于设置文本截断后的 ... $lines 行数 $substract 缩进距离
 
 @mixin ellipsis($lines: 1, $substract: 0) {
