@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-
+/* 合并所有的 mixin 方便引用 */
 @import './border';
 @import './button';
 @import './size';
@@ -10,3 +10,4 @@
 @import './clearfix';
 @import './height';
 @import './table-row';
+@import './color';

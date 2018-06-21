@@ -1,16 +1,15 @@
 // 用于设置文本截断后的 ... $lines 行数 $substract 缩进距离
 
 @mixin ellipsis($lines: 1, $substract: 0) {
-    @if $lines==1 {
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        width: 100% - $substract;
-        overflow: hidden;
-    }
-    @else {
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: $lines;
-        -webkit-box-orient: vertical;
-    }
+  @if $lines==1 {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100% - $substract;
+    overflow: hidden;
+  } @else {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+  }
 }

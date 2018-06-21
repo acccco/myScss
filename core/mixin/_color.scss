@@ -2,7 +2,7 @@
 
 /* 用于遍历颜色生成一系列可用的class，
  * 背景色（b-xxx），字的颜色（f-xxx），按钮的颜色（bt-xxx按钮边框加深10%）
- * 需要的更改颜色和class名称只需到variables文件中修改色值以及对应的名称即可 
+ * 需要的更改颜色和 class 名称只需到 variables 文件中修改色值以及对应的名称即可
  */
 
 @mixin makeColorList($color-list) {

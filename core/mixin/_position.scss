@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-/* 接受1到4个参数，从顶部开始，逆时针（习惯上喜欢设置top和left所以这里是顺时针） */
+/* 接受1到4个参数，从顶部开始，逆时针（习惯上喜欢设置top和left所以这里是逆时针） */
 @mixin posi($posi...) {
   position: absolute;
   @if length($posi)==1 {

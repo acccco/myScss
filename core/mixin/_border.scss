@@ -5,29 +5,27 @@
 /* 1到4个参数都可，和padding行为一致 */
 
 @mixin b-color($color...) {
-    @if length($color)==1 {
-        border-color: $color;
+  @if length($color)==1 {
+    border-color: $color;
+  } @else {
+    @if length($color)==2 {
+      $color: (nth($color, 1), nth($color, 2), nth($color, 1), nth($color, 2))
+    } @else if length($color)==3 {
+      $color: (nth($color, 1), nth($color, 2), nth($color, 3), nth($color, 2))
     }
-    @else {
-        @if length($color)==2 {
-            $color: (nth($color, 1), nth($color, 2), nth($color, 1), nth($color, 2))
-        }
-        @else if length($color)==3 {
-            $color: (nth($color, 1), nth($color, 2), nth($color, 3), nth($color, 2))
-        }
-        @if nth($color, 1)!=null {
-            border-top-color: nth($color, 1);
-        }
-        @if nth($color, 2)!=null {
-            border-right-color: nth($color, 2);
-        }
-        @if nth($color, 3)!=null {
-            border-bottom-color: nth($color, 3);
-        }
-        @if nth($color, 4)!=null {
-            border-left-color: nth($color, 4);
-        }
+    @if nth($color, 1)!=null {
+      border-top-color: nth($color, 1);
     }
+    @if nth($color, 2)!=null {
+      border-right-color: nth($color, 2);
+    }
+    @if nth($color, 3)!=null {
+      border-bottom-color: nth($color, 3);
+    }
+    @if nth($color, 4)!=null {
+      border-left-color: nth($color, 4);
+    }
+  }
 }
 
 // 圆角
@@ -35,55 +33,51 @@
 /* 1到4个参数都可，从左上开始顺时针，未填写或null即不设置圆角 */
 
 @mixin b-radius($radius...) {
-    @if length($radius)==1 {
-        border-radius: $radius;
+  @if length($radius)==1 {
+    border-radius: $radius;
+  } @else {
+    @if length($radius)==2 {
+      $radius: (nth($radius, 1), nth($radius, 2), null, null)
+    } @else if length($radius)==3 {
+      $radius: (nth($radius, 1), nth($radius, 2), nth($radius, 3), null)
     }
-    @else {
-        @if length($radius)==2 {
-            $radius: (nth($radius, 1), nth($radius, 2), null, null)
-        }
-        @else if length($radius)==3 {
-            $radius: (nth($radius, 1), nth($radius, 2), nth($radius, 3), null)
-        }
-        @if nth($radius, 1)!=null {
-            border-top-left-radius: nth($radius, 1);
-        }
-        @if nth($radius, 2)!=null {
-            border-top-right-radius: nth($radius, 2);
-        }
-        @if nth($radius, 3)!=null {
-            border-bottom-right-radius: nth($radius, 3);
-        }
-        @if nth($radius, 4)!=null {
-            border-bottom-left-radius: nth($radius, 4);
-        }
+    @if nth($radius, 1)!=null {
+      border-top-left-radius: nth($radius, 1);
     }
+    @if nth($radius, 2)!=null {
+      border-top-right-radius: nth($radius, 2);
+    }
+    @if nth($radius, 3)!=null {
+      border-bottom-right-radius: nth($radius, 3);
+    }
+    @if nth($radius, 4)!=null {
+      border-bottom-left-radius: nth($radius, 4);
+    }
+  }
 }
 
 // 边框宽
 /* 1到4个参数都可，和padding行为一致 */
 @mixin b-width($width...) {
-    @if length($width)==1 {
-        border-width: $width;
+  @if length($width)==1 {
+    border-width: $width;
+  } @else {
+    @if length($width)==2 {
+      $width: (nth($width, 1), nth($width, 2), nth($width, 1), nth($width, 2))
+    } @else if length($width)==3 {
+      $width: (nth($width, 1), nth($width, 2), nth($width, 3), nth($width, 2))
     }
-    @else {
-        @if length($width)==2 {
-            $width: (nth($width, 1), nth($width, 2), nth($width, 1), nth($width, 2))
-        }
-        @else if length($width)==3 {
-            $width: (nth($width, 1), nth($width, 2), nth($width, 3), nth($width, 2))
-        }
-        @if nth($width, 1)!=null {
-            border-top-width: nth($width, 1);
-        }
-        @if nth($width, 2)!=null {
-            border-right-width: nth($width, 2);
-        }
-        @if nth($width, 3)!=null {
-            border-bottom-width: nth($width, 3);
-        }
-        @if nth($width, 4)!=null {
-            border-left-width: nth($width, 4);
-        }
+    @if nth($width, 1)!=null {
+      border-top-width: nth($width, 1);
     }
+    @if nth($width, 2)!=null {
+      border-right-width: nth($width, 2);
+    }
+    @if nth($width, 3)!=null {
+      border-bottom-width: nth($width, 3);
+    }
+    @if nth($width, 4)!=null {
+      border-left-width: nth($width, 4);
+    }
+  }
 }

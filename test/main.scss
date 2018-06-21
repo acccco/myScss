@@ -3,98 +3,98 @@
 @import "../core/init";
 
 body {
-    >div {
-        @extend .m-t-10;
-    }
+  > div {
+    @extend .m-t-10;
+  }
 }
 
 .h-50 {
-    height: 50px;
-    background: #eee;
+  height: 50px;
+  background: #eee;
 }
 
 .test1 {
-    span {
-        @include square(20px);
-    }
+  span {
+    @include square(20px);
+  }
 }
 
 .border-test1 {
-    border: 10px solid;
-    @include b-color(#5B88CB, #FFCB00)
+  border: 10px solid;
+  @include b-color(#5B88CB, #FFCB00)
 }
 
 .border-test2 {
-    border: 10px solid;
-    @include b-color(#5B88CB, #FFCB00, #FF8D8D)
+  border: 10px solid;
+  @include b-color(#5B88CB, #FFCB00, #FF8D8D)
 }
 
 .border-test3 {
-    border: 10px solid #000;
-    @include b-color(#5B88CB, #FFCB00, #FF8D8D, #000)
+  border: 10px solid #000;
+  @include b-color(#5B88CB, #FFCB00, #FF8D8D, #000)
 }
 
 .border-test4 {
-    @include square(100px);
-    @include b-radius(10px, 20px)
+  @include square(100px);
+  @include b-radius(10px, 20px)
 }
 
 .border-test5 {
-    @include square(100px);
-    @include b-radius(10px, 20px, 30px)
+  @include square(100px);
+  @include b-radius(10px, 20px, 30px)
 }
 
 .border-test6 {
-    @include square(100px);
-    @include b-radius(10px, 20px, 30px, 40px)
+  @include square(100px);
+  @include b-radius(10px, 20px, 30px, 40px)
 }
 
 .border-test7 {
-    border: solid #000;
-    @include b-width(10px, 20px)
+  border: solid #000;
+  @include b-width(10px, 20px)
 }
 
 .border-test8 {
-    border: solid #000;
-    @include b-width(10px, 20px, 30px)
+  border: solid #000;
+  @include b-width(10px, 20px, 30px)
 }
 
 .border-test9 {
-    border: solid #000;
-    @include b-width(10px, 20px, 30px, 40px)
+  border: solid #000;
+  @include b-width(10px, 20px, 30px, 40px)
 }
 
 .testp {
-    @include size(100%, 100px);
-    .inner {
-        @include square(20px);
-        &.box-1 {
-            @include posi(20px, 20px);
-        }
-        &.box-2 {
-            @include posi(20px, null, null, 20px);
-        }
-        &.box-3 {
-            @include posi(null, 20px, 20px, null);
-        }
-        &.box-4 {
-            @include posi(null, null, 20px, 20px);
-        }
+  @include size(100%, 100px);
+  .inner {
+    @include square(20px);
+    &.box-1 {
+      @include posi(20px, 20px);
     }
+    &.box-2 {
+      @include posi(20px, null, null, 20px);
+    }
+    &.box-3 {
+      @include posi(null, 20px, 20px, null);
+    }
+    &.box-4 {
+      @include posi(null, null, 20px, 20px);
+    }
+  }
 }
 
 .text1 {
-    @include ellipsis(1, 10%);
+  @include ellipsis(1, 10%);
 }
 
 .text2 {
-    @include ellipsis(2);
+  @include ellipsis(2);
 }
 
-.l-height1{
-	@include l-height(50px);
+.l-height1 {
+  @include l-height(50px);
 }
 
-.l-height2{
-	@include l-height(100px,20px);
+.l-height2 {
+  @include l-height(100px, 20px);
 }
