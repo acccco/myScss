@@ -224,6 +224,15 @@ th {
     /* 需要设置一个宽度达到完全平分 */
     width: 10px; }
 
+.x-center {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .x-center.end {
+    justify-content: flex-end; }
+  .x-center.start {
+    justify-content: flex-start; }
+
 .x-b-c {
   margin: 0 auto; }
 

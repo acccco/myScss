@@ -2,40 +2,52 @@
 
 .x-flex-contain,
 .x-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    &.r-reverse {
-        flex-direction: row-reverse;
-    }
-    &.c-reverse {
-        flex-direction: column-reverse;
-    }
-    &.column {
-        flex-direction: column;
-    }
-    &.start {
-        justify-content: flex-start;
-    }
-    &.end {
-        justify-content: flex-end;
-    }
-    &.avg {
-        justify-content: space-around;
-    }
-    &.between {
-       justify-content: space-between;
-    }
-    &.evenly {
-       justify-content: space-evenly;
-    }
-    &.wrap {
-        flex-wrap: wrap;
-    }
-    >.x-flex-a {
-        flex: auto;
-        /* 需要设置一个宽度达到完全平分 */
-        width:10px;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  &.r-reverse {
+    flex-direction: row-reverse;
+  }
+  &.c-reverse {
+    flex-direction: column-reverse;
+  }
+  &.column {
+    flex-direction: column;
+  }
+  &.start {
+    justify-content: flex-start;
+  }
+  &.end {
+    justify-content: flex-end;
+  }
+  &.avg {
+    justify-content: space-around;
+  }
+  &.between {
+    justify-content: space-between;
+  }
+  &.evenly {
+    justify-content: space-evenly;
+  }
+  &.wrap {
+    flex-wrap: wrap;
+  }
+  > .x-flex-a {
+    flex: auto;
+    /* 需要设置一个宽度达到完全平分 */
+    width: 10px;
+  }
+}
+
+.x-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &.end {
+    justify-content: flex-end;
+  }
+  &.start {
+    justify-content: flex-start;
+  }
 }
