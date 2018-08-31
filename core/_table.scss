@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+@import './mixin/tableRow';
+
 caption {
   padding-top: $table-cell-padding;
   padding-bottom: $table-cell-padding;

@@ -12,8 +12,5 @@
     .f-#{''+$name} {
       color: $color;
     }
-    .btn-#{''+$name} {
-      @include button-variant(#fff, $color, darken($color, 10%));
-    }
   }
 }

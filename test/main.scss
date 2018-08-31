@@ -1,6 +1,9 @@
 @charset "utf-8";
 
 @import "../core/init";
+@import "../core/table";
+@import "../core/buttons";
+@import "../core/buttonGroups";
 
 $color-list: (blue: #5B88CB, grey: #CCCCCC, yellow: #FFCB00, pink: #FF8D8D, dark: #000, white: #fff);
 
@@ -8,7 +11,12 @@ body {
   > div {
     @extend .m-t-10;
   }
-  @include make-color-list($color-list)
+  @include make-color-list($color-list);
+  @include make-button-list($color-list);
+}
+
+.btn {
+  @include button-size(10px, 10px, 20px, 1em, 10px);
 }
 
 .h-50 {
