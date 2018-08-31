@@ -7,7 +7,6 @@
 /* 接受1到4个参数，从顶部开始，逆时针（习惯上喜欢设置top和left所以这里是逆时针） */
 /* 用于遍历颜色生成一系列可用的class，
  * 背景色（b-xxx），字的颜色（f-xxx），按钮的颜色（bt-xxx按钮边框加深10%）
- * 需要的更改颜色和 class 名称只需到 variables 文件中修改色值以及对应的名称即可
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
@@ -198,10 +197,6 @@ th {
   white-space: nowrap;
   user-select: none;
   box-sizing: border-box;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.428571429;
-  border-radius: 4px;
   color: #000;
   background-color: #fff;
   border-color: #ccc; }
@@ -460,7 +455,7 @@ th {
     /* 需要设置一个宽度达到完全平分 */
     width: 10px; }
 
-.x-b-center {
+.x-b-c {
   margin: 0 auto; }
 
 .x-t-r {
@@ -697,6 +692,51 @@ th {
 
 .m-l-45 {
   margin-left: 45px; }
+
+.f-s-12 {
+  font-size: 18px; }
+
+.f-s-14 {
+  font-size: 20px; }
+
+.f-s-16 {
+  font-size: 22px; }
+
+.f-s-18 {
+  font-size: 24px; }
+
+.f-s-20 {
+  font-size: 26px; }
+
+.f-s-22 {
+  font-size: 28px; }
+
+.f-s-24 {
+  font-size: 30px; }
+
+.f-s-26 {
+  font-size: 32px; }
+
+.f-s-28 {
+  font-size: 34px; }
+
+.f-s-30 {
+  font-size: 36px; }
+
+.f-s-32 {
+  font-size: 38px; }
+
+.f-s-34 {
+  font-size: 40px; }
+
+.f-s-36 {
+  font-size: 42px; }
+
+.f-s-38 {
+  font-size: 44px; }
+
+.f-s-40 {
+  font-size: 46px; }
 
 body .b-blue {
   background-color: #5B88CB; }
