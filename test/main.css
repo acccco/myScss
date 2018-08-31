@@ -462,6 +462,30 @@ th {
 .m-l-45 {
   margin-left: 45px; }
 
+.p-t-50 {
+  padding-top: 50px; }
+
+.p-b-50 {
+  padding-bottom: 50px; }
+
+.p-r-50 {
+  padding-right: 50px; }
+
+.p-l-50 {
+  padding-left: 50px; }
+
+.m-t-50 {
+  margin-top: 50px; }
+
+.m-b-50 {
+  margin-bottom: 50px; }
+
+.m-r-50 {
+  margin-right: 50px; }
+
+.m-l-50 {
+  margin-left: 50px; }
+
 .f-s-18 {
   font-size: 18px; }
 
@@ -497,6 +521,12 @@ th {
 
 .f-s-40 {
   font-size: 40px; }
+
+.t-in-one-line {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+  overflow: hidden; }
 
 caption {
   padding-top: 8px;

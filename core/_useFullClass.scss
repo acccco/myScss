@@ -29,7 +29,7 @@
 }
 
 /* 提供 5 - 50 的 padding/margin 简写 */
-@for $i from 1 to 10 {
+@for $i from 1 through 10 {
   .p-t-#{$i*5} {
     padding-top: $i*5px;
   }
@@ -61,4 +61,8 @@
   .f-s-#{$i*2+18} {
     font-size: $i*2+18px;
   }
+}
+
+.t-in-one-line {
+  @include ellipsis()
 }
