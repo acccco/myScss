@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-.x-flex-contain,
 .x-row {
   display: flex;
   align-items: center;
@@ -9,11 +8,11 @@
   &.r-reverse {
     flex-direction: row-reverse;
   }
-  &.c-reverse {
-    flex-direction: column-reverse;
-  }
   &.column {
     flex-direction: column;
+  }
+  &.c-reverse {
+    flex-direction: column-reverse;
   }
   &.start {
     justify-content: flex-start;

@@ -1,8 +1,7 @@
 @charset "utf-8";
 
 /* 设置 inline-block 的大小，内边距 行高 字体大小 */
-@mixin ib-size($padding, $line-height:$line-height-base, $font-size:$font-size-base) {
-  display: inline-block;
+@mixin inline-size($padding, $line-height: $line-height-base, $font-size: $font-size-base) {
   padding: $padding;
   line-height: $line-height;
   font-size: $font-size;

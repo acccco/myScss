@@ -3,6 +3,7 @@
 @import "./mixin/button";
 
 // Buttons
+//
 // Base styles 初始类，用于button元素
 // 规定4个伪类的基本样式 :active, :focus, :hover, disabled
 // 4个基本的类对应相应的伪类 .active, .focus, .hover, .disabled
@@ -18,7 +19,8 @@
   white-space: nowrap;
   user-select: none;
   box-sizing: border-box;
-  @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+  border-radius: $btn-border-radius-base;
+  @include button-variant($btn-default-bg, $btn-default-border);
 
   &,
   &:active,
@@ -41,14 +43,14 @@
   &.active {
     outline: 0;
     background-image: none;
-    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   }
 
   &.disabled,
   &[disabled] {
     cursor: not-allowed;
     box-shadow: none;
-    opacity: .65;
+    opacity: 0.65;
   }
 }
 
@@ -62,12 +64,4 @@ a.btn {
 .btn-block {
   display: block;
   width: 100%;
-}
-
-@mixin make-button-list($color-list) {
-  @each $name, $color in $color-list {
-    .btn-#{''+$name} {
-      @include button-variant(#fff, $color, darken($color, 10%));
-    }
-  }
 }

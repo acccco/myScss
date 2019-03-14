@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-//
 // Button groups
 //
 // 初始类直接使用，用于生成存放按钮的容器
@@ -41,13 +40,13 @@
 .btn-group > .btn:first-child:not(:last-of-type) {
   margin-left: 0;
   &:not(:last-of-type) {
-    @include b-radius(null, 0, 0, null);
+    @include border-right-radius(0);
   }
 }
 
 // 取消最后一个按钮的左侧圆角
 .btn-group > .btn:last-of-type:not(:first-child) {
-  @include b-radius(0, null, null, 0);
+  @include border-left-radius(0);
 }
 
 // 修正 btn-group 中的 btn-group 表现于 btn 一样
@@ -63,18 +62,18 @@
 // 修正 btn-group 中的 btn-group 第一个中的最后一个 btn 不应该有右侧圆角
 .btn-group > .btn-group:first-child:not(:last-of-type) {
   > .btn:last-of-type {
-    @include b-radius(null, 0, 0, null);
+    @include border-right-radius(0);
   }
 }
 
 // 修正 btn-group 中的 btn-group 最后一个中的第一个 btn 不应该有左侧圆角
 .btn-group > .btn-group:last-of-type:not(:first-child) > .btn:first-child {
-  @include b-radius(0, null, null, 0);
+  @include border-left-radius(0);
 }
 
 // 规定按下的按钮的样式
 .btn-group.open {
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125); // Show no shadow for `.btn-link` since it has no other button styles.
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); // Show no shadow for `.btn-link` since it has no other button styles.
   &.btn-link {
     box-shadow: none;
   }
@@ -114,10 +113,10 @@
     border-radius: 0;
   }
   &:first-child:not(:last-of-type) {
-    @include b-radius($btn-border-radius-base, $btn-border-radius-base, 0, 0);
+    @include border-bottom-radius(0);
   }
   &:last-of-type:not(:first-child) {
-    @include b-radius(0, 0, $btn-border-radius-base, $btn-border-radius-base);
+    @include border-top-radius(0);
   }
 }
 
@@ -127,12 +126,12 @@
 
 .btn-group-vertical > .btn-group:first-child:not(:last-of-type) {
   > .btn:last-of-type {
-    @include b-radius(null, null, 0, 0);
+    @include border-bottom-radius(0);
   }
 }
 
 .btn-group-vertical > .btn-group:last-of-type:not(:first-child) > .btn:first-child {
-  @include b-radius(0, 0, null, null);
+  @include border-top-radius(0);
 }
 
 // 两边对齐按钮

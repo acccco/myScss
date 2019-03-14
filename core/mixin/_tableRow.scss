@@ -27,3 +27,9 @@
     }
   }
 }
+
+@mixin make-tr-color($color-list) {
+  @each $name, $color in $color-list {
+    @include table-row-variant(#{"trc-" + $name}, $color);
+  }
+}

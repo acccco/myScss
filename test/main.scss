@@ -5,18 +5,27 @@
 @import "../core/buttons";
 @import "../core/buttonGroups";
 
-$color-list: (blue: #5B88CB, grey: #CCCCCC, yellow: #FFCB00, pink: #FF8D8D, dark: #000, white: #fff);
+$color-list: (
+  blue: #5b88cb,
+  grey: #cccccc,
+  yellow: #ffcb00,
+  pink: #ff8d8d,
+  dark: #000,
+  white: #fff
+);
 
 body {
   > div {
-    @extend .m-t-10;
+    @extend .x-m-t-10;
   }
-  @include make-color-list($color-list);
-  @include make-button-list($color-list);
+  @include make-background-color($color-list);
+  @include make-font-color($color-list);
+  @include make-botton-color($color-list);
+  @include make-tr-color($color-list);
 }
 
 .btn {
-  @include button-size(10px, 10px, 20px, 1em, 10px);
+  @include inline-size(10px, 20px, 1em);
 }
 
 .h-50 {
@@ -26,59 +35,14 @@ body {
 
 .test1 {
   span {
-    @include square(20px);
+    @include size(20px);
   }
-}
-
-.border-test1 {
-  border: 10px solid;
-  @include b-color(#5B88CB, #FFCB00)
-}
-
-.border-test2 {
-  border: 10px solid;
-  @include b-color(#5B88CB, #FFCB00, #FF8D8D)
-}
-
-.border-test3 {
-  border: 10px solid #000;
-  @include b-color(#5B88CB, #FFCB00, #FF8D8D, #000)
-}
-
-.border-test4 {
-  @include square(100px);
-  @include b-radius(10px, 20px)
-}
-
-.border-test5 {
-  @include square(100px);
-  @include b-radius(10px, 20px, 30px)
-}
-
-.border-test6 {
-  @include square(100px);
-  @include b-radius(10px, 20px, 30px, 40px)
-}
-
-.border-test7 {
-  border: solid #000;
-  @include b-width(10px, 20px)
-}
-
-.border-test8 {
-  border: solid #000;
-  @include b-width(10px, 20px, 30px)
-}
-
-.border-test9 {
-  border: solid #000;
-  @include b-width(10px, 20px, 30px, 40px)
 }
 
 .testp {
   @include size(100%, 100px);
   .inner {
-    @include square(20px);
+    @include size(20px);
     &.box-1 {
       @include posi(20px, 20px);
     }

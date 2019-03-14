@@ -6,38 +6,36 @@
 // :hover, :focus, :active, disabled
 // 4种显示的class
 // .hover, .focus, :active, .disabled
-// button-variant 调整颜色、背景、边框
-// button-size 调整大小、内边距、字体、行高
+// button-variant 调整颜色：背景、边框
 
-@mixin button-variant($color, $background, $border) {
-  color: $color;
+@mixin button-variant($background, $border: darken($background, 10%)) {
+  @if ($border == null) {
+    $border: darken($background, 10%);
+  }
+
   background-color: $background;
   border-color: $border;
 
   &:focus,
   &.focus {
-    color: $color;
     background-color: darken($background, 10%);
     border-color: darken($border, 25%);
   }
 
   &:hover,
   &.hover {
-    color: $color;
     background-color: darken($background, 10%);
     border-color: darken($border, 12%);
   }
 
   &:active,
   &.active {
-    color: $color;
     background-color: darken($background, 10%);
     border-color: darken($border, 12%);
 
     &:hover,
     &:focus,
     &.focus {
-      color: $color;
       background-color: darken($background, 17%);
       border-color: darken($border, 25%);
     }
@@ -57,12 +55,4 @@
       border-color: $border;
     }
   }
-}
-
-// Button 大小调整
-@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
-  padding: $padding-vertical $padding-horizontal;
-  font-size: $font-size;
-  line-height: $line-height;
-  border-radius: $border-radius;
 }

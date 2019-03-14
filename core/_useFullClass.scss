@@ -30,39 +30,39 @@
 
 /* 提供 5 - 50 的 padding/margin 简写 */
 @for $i from 1 through 10 {
-  .p-t-#{$i*5} {
-    padding-top: $i*5px;
+  .x-p-t-#{$i*5} {
+    padding-top: $i * 5px;
   }
-  .p-b-#{$i*5} {
-    padding-bottom: $i*5px;
+  .x-p-b-#{$i*5} {
+    padding-bottom: $i * 5px;
   }
-  .p-r-#{$i*5} {
-    padding-right: $i*5px;
+  .x-p-r-#{$i*5} {
+    padding-right: $i * 5px;
   }
-  .p-l-#{$i*5} {
-    padding-left: $i*5px;
+  .x-p-l-#{$i*5} {
+    padding-left: $i * 5px;
   }
-  .m-t-#{$i*5} {
-    margin-top: $i*5px;
+  .x-m-t-#{$i*5} {
+    margin-top: $i * 5px;
   }
-  .m-b-#{$i*5} {
-    margin-bottom: $i*5px;
+  .x-m-b-#{$i*5} {
+    margin-bottom: $i * 5px;
   }
-  .m-r-#{$i*5} {
-    margin-right: $i*5px;
+  .x-m-r-#{$i*5} {
+    margin-right: $i * 5px;
   }
-  .m-l-#{$i*5} {
-    margin-left: $i*5px;
-  }
-}
-
-// 提供 12 - 40 双字号的简写
-@for $i from 0 through 11 {
-  .f-s-#{$i*2+18} {
-    font-size: $i*2+18px;
+  .x-m-l-#{$i*5} {
+    margin-left: $i * 5px;
   }
 }
 
-.t-in-one-line {
-  @include ellipsis()
+// 提供 12 - 30 双字号的简写
+@for $i from 0 through 6 {
+  .x-f-s-#{$i * 2 + 18} {
+    font-size: $i * 2 + 18px;
+  }
+}
+
+.x-ellipsis {
+  @include ellipsis();
 }

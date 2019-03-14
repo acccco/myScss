@@ -1,0 +1,6 @@
+@charset "utf-8";
+
+@mixin font-size($line-height: $line-height-base, $font-size: $font-size-base) {
+  font-size: $font-size;
+  line-height: $line-height;
+}
