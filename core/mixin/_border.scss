@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-// 补充不能设置单边 border
+// 补充不能设置单边 border-radius
 
 @mixin border-top-radius($radius) {
   border-top-left-radius: $radius;
