@@ -1,54 +1,93 @@
 @charset "utf-8";
 
-.x-row {
+.x-flex {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  &.r-reverse {
+  align-content: stretch;
+
+  // 主轴方向
+  &.x-m-l2r {
+    flex-direction: row;
+  }
+
+  &.x-m-r2l {
     flex-direction: row-reverse;
   }
-  &.column {
+
+  &.x-m-t2b {
     flex-direction: column;
   }
-  &.c-reverse {
+
+  &.x-m-b2t {
     flex-direction: column-reverse;
   }
-  &.start {
+
+  // 容器行内内容块主轴方向上的空间分配
+  &.x-m-start {
     justify-content: flex-start;
   }
-  &.end {
+
+  &.x-m-end {
     justify-content: flex-end;
   }
-  &.avg {
+
+  &.x-m-around {
     justify-content: space-around;
   }
-  &.between {
+
+  &.x-m-between {
     justify-content: space-between;
   }
-  &.evenly {
+
+  &.x-m-evenly {
     justify-content: space-evenly;
   }
-  &.wrap {
+
+  // 容器行内内容块交叉轴方向上的空间分配
+  &.x-a-start {
+    align-items: flex-start;
+  }
+
+  &.x-a-end {
+    align-items: flex-end;
+  }
+
+  &.x-a-baseline {
+    align-items: baseline;
+  }
+
+  &.x-a-stretch {
+    align-items: stretch;
+  }
+
+  // 多行容器以及交叉轴方向
+  &.x-a-t2b {
     flex-wrap: wrap;
   }
-  &.x-flex-a {
-    > * {
-      flex: auto;
-      /* 需要设置一个宽度达到完全平分 */
-      width: 10px;
-    }
-  }
-}
 
-.x-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  &.end {
-    justify-content: flex-end;
+  &.x-a-b2t {
+    flex-wrap: wrap-reverse;
   }
-  &.start {
-    justify-content: flex-start;
+
+  // 容器行空间分配
+  &.x-r-start {
+    align-content: flex-start;
+  }
+
+  &.x-r-end {
+    align-content: flex-end;
+  }
+
+  &.x-r-around {
+    align-content: space-around;
+  }
+
+  &.x-r-between {
+    align-content: space-between;
+  }
+
+  &.x-r-evenly {
+    align-content: space-evenly;
   }
 }
