@@ -20,7 +20,7 @@
   }
 }
 
-@mixin make-botton-color($color-list) {
+@mixin make-button-color($color-list) {
   @each $name, $background-color, $border-color in $color-list {
     .btnc-#{"" + $name} {
       @include button-variant($background-color, $border-color);

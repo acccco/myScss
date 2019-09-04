@@ -1,8 +1,8 @@
 @charset "utf-8";
 
 /* 接受1到4个参数，从顶部开始，逆时针（习惯上喜欢设置top和left所以这里是逆时针） */
-@mixin posi($posi...) {
-  position: absolute;
+@mixin position($type, $posi...) {
+  position: $type;
   @if length($posi) == 1 {
     $posi: (nth($posi, 1), null, null, null);
   } @else if length($posi) == 2 {

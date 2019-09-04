@@ -6,7 +6,7 @@
   height: $height;
 }
 
-@mixin circle($size) {
-  @include size($size, $size);
-  border-radius: $size / 2;
+@mixin circle($width, $height: $width) {
+  @include size($width, $height);
+  border-radius: 50%;
 }
