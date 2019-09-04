@@ -3,7 +3,6 @@
 .x-flex {
   display: flex;
   align-items: center;
-  justify-content: center;
   align-content: stretch;
 
   // 主轴方向
@@ -32,6 +31,10 @@
     justify-content: flex-end;
   }
 
+  &.x-m-center {
+    justify-content: center;
+  }
+
   &.x-m-around {
     justify-content: space-around;
   }
@@ -42,6 +45,13 @@
 
   &.x-m-evenly {
     justify-content: space-evenly;
+  }
+
+  &.x-m-avg {
+    > * {
+      width: 10px;
+      flex: auto;
+    }
   }
 
   // 容器行内内容块交叉轴方向上的空间分配
@@ -61,6 +71,26 @@
     align-items: stretch;
   }
 
+  .x-s-start {
+    align-self: flex-start;
+  }
+
+  .x-s-end {
+    align-self: flex-end;
+  }
+
+  .x-s-center {
+    align-self: center;
+  }
+
+  .x-s-baseline {
+    align-self: baseline;
+  }
+
+  .x-s-stretch {
+    align-self: stretch;
+  }
+
   // 多行容器以及交叉轴方向
   &.x-a-t2b {
     flex-wrap: wrap;
@@ -77,6 +107,10 @@
 
   &.x-r-end {
     align-content: flex-end;
+  }
+
+  &.x-r-center {
+    align-content: center;
   }
 
   &.x-r-around {

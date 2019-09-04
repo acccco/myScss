@@ -28,8 +28,8 @@
   position: relative;
 }
 
-/* 提供 5 - 50 的 padding/margin 简写 */
-@for $i from 1 through 10 {
+/* 提供 5 - 30 的 padding/margin 简写 */
+@for $i from 1 through 6 {
   .x-p-t-#{$i*5} {
     padding-top: $i * 5px;
   }
