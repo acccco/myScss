@@ -1,25 +1,25 @@
 @charset "utf-8";
 
 /* 接受1到4个参数，从顶部开始，逆时针（习惯上喜欢设置top和left所以这里是逆时针） */
-@mixin position($type, $posi...) {
+@mixin position($type, $position...) {
   position: $type;
-  @if length($posi) == 1 {
-    $posi: (nth($posi, 1), null, null, null);
-  } @else if length($posi) == 2 {
-    $posi: (nth($posi, 1), nth($posi, 2), null, null);
-  } @else if length($posi) == 3 {
-    $posi: (nth($posi, 1), nth($posi, 2), nth($posi, 3), null);
+  @if length($position) == 1 {
+    $position: (nth($position, 1), null, null, null);
+  } @else if length($position) == 2 {
+    $position: (nth($position, 1), nth($position, 2), null, null);
+  } @else if length($position) == 3 {
+    $position: (nth($position, 1), nth($position, 2), nth($position, 3), null);
   }
-  @if nth($posi, 1) != null {
-    top: nth($posi, 1);
+  @if nth($position, 1) != null {
+    top: nth($position, 1);
   }
-  @if nth($posi, 2) != null {
-    left: nth($posi, 2);
+  @if nth($position, 2) != null {
+    left: nth($position, 2);
   }
-  @if nth($posi, 3) != null {
-    bottom: nth($posi, 3);
+  @if nth($position, 3) != null {
+    bottom: nth($position, 3);
   }
-  @if nth($posi, 4) != null {
-    right: nth($posi, 4);
+  @if nth($position, 4) != null {
+    right: nth($position, 4);
   }
 }
