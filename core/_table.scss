@@ -31,11 +31,13 @@ th {
       }
     }
   }
+
   // 标题行下方加粗
   > thead > tr > th {
     vertical-align: bottom;
     border-bottom: 2px solid $table-border-color;
   }
+
   // 去掉 thead 的上边框
   > caption + thead,
   > colgroup + thead,
@@ -47,6 +49,7 @@ th {
       }
     }
   }
+
   // 使用 tbody 来区分不同的 tbody
   > tbody + tbody {
     border-top: 2px solid $table-border-color;
@@ -69,6 +72,7 @@ th {
   // 有边框的表格
   &.bordered {
     border: 1px solid $table-border-color;
+
     > thead,
     > tbody,
     > tfoot {
@@ -79,6 +83,7 @@ th {
         }
       }
     }
+
     > thead > tr {
       > th,
       > td {

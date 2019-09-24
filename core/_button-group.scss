@@ -1,22 +1,23 @@
 @charset "utf-8";
 
 // Button groups
-//
 // 初始类直接使用，用于生成存放按钮的容器
-// Make the div behave like a button
 .btn-group,
 .btn-group-vertical {
   position: relative;
   display: inline-block;
-  vertical-align: middle; // match .btn alignment given font-size hack above
+  vertical-align: middle;
+
   > .btn {
     position: relative;
     float: left;
+
     &:hover,
     &:focus,
     &:active,
     &.active {
-      z-index: 2; // 使得 'active' 按钮显示最前
+      // 使得 'active' 按钮显示最前
+      z-index: 2;
     }
   }
 }
@@ -39,6 +40,7 @@
 // 取消第一个按钮的右侧圆角、取消向左偏移1px
 .btn-group > .btn:first-child:not(:last-of-type) {
   margin-left: 0;
+
   &:not(:last-of-type) {
     @include border-right-radius(0);
   }
@@ -82,6 +84,7 @@
 // 垂直按钮，默认一整排，宽度100%显示
 .btn-group-vertical {
   display: block;
+
   > .btn,
   > .btn-group,
   > .btn-group > .btn {
@@ -90,9 +93,11 @@
     width: 100%;
     max-width: 100%;
   }
+
   // 清除浮动，使得父元素的高度正确
   > .btn-group {
     @include clearfix;
+
     > .btn {
       float: none;
     }
@@ -112,9 +117,11 @@
   &:not(:first-child):not(:last-of-type) {
     border-radius: 0;
   }
+
   &:first-child:not(:last-of-type) {
     @include border-bottom-radius(0);
   }
+
   &:last-of-type:not(:first-child) {
     @include border-top-radius(0);
   }
@@ -140,12 +147,14 @@
   width: 100%;
   table-layout: fixed;
   border-collapse: separate;
+
   > .btn,
   > .btn-group {
     float: none;
     display: table-cell;
     width: 1%;
   }
+
   > .btn-group .btn {
     width: 100%;
   }

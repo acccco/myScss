@@ -4,12 +4,16 @@
   margin: 0 auto;
 }
 
+.x-t-c {
+  text-align: center;
+}
+
 .x-t-r {
   text-align: right;
 }
 
-.x-t-c {
-  text-align: center;
+.x-t-l {
+  text-align: left;
 }
 
 .x-f-l {
@@ -18,10 +22,6 @@
 
 .x-f-r {
   float: right;
-}
-
-.x-p-r {
-  position: relative;
 }
 
 /* 提供 5 - 30 的 padding/margin 简写 */
@@ -54,11 +54,12 @@
 
 // 提供 12 - 30 双字号的简写
 @for $i from 0 through 6 {
-  .x-f-s-#{$i * 2 + 18} {
+  .x-font-s-#{$i * 2 + 18} {
     font-size: $i * 2 + 18px;
   }
 }
 
+// 单行溢出 ...
 .x-ellipsis {
   @include ellipsis();
 }

@@ -1,6 +1,0 @@
-@charset "utf-8";
-
-@mixin l-height($height, $l-height: $height) {
-  line-height: $l-height;
-  height: $height;
-}

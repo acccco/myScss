@@ -1,8 +1,0 @@
-@charset "utf-8";
-
-/* 设置 inline-block 的大小，内边距 行高 字体大小 */
-@mixin inline-size($padding, $line-height: 'inherit', $font-size: 'inherit') {
-  padding: $padding;
-  line-height: $line-height;
-  font-size: $font-size;
-}

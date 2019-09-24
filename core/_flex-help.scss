@@ -3,6 +3,7 @@
 .x-flex {
   display: flex;
   align-items: center;
+  justify-content: center;
   align-content: stretch;
 
   // 主轴方向
@@ -54,6 +55,15 @@
     }
   }
 
+  // 多行容器以及交叉轴方向
+  &.x-a-t2b {
+    flex-wrap: wrap;
+  }
+
+  &.x-a-b2t {
+    flex-wrap: wrap-reverse;
+  }
+
   // 容器行内内容块交叉轴方向上的空间分配
   &.x-a-start {
     align-items: flex-start;
@@ -89,15 +99,6 @@
 
   .x-s-stretch {
     align-self: stretch;
-  }
-
-  // 多行容器以及交叉轴方向
-  &.x-a-t2b {
-    flex-wrap: wrap;
-  }
-
-  &.x-a-b2t {
-    flex-wrap: wrap-reverse;
   }
 
   // 容器行空间分配

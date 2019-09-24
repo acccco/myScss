@@ -6,10 +6,10 @@
 
 补充不能设置单边的圆角
 
-- border-top-radius($radius-length)
-- border-bottom-radius($radius-length)
-- border-right-radius($radius-length)
-- border-left-radius($radius-length)
+- border-top-radius($radius)
+- border-bottom-radius($radius)
+- border-right-radius($radius)
+- border-left-radius($radius)
 
 #### clearfix
 
@@ -21,27 +21,16 @@
 
 生成颜色类
 
-- make-background-color($color-map) 生成背景色的类，`.bc-${name}`
-- make-font-color($color-map)       生成字体颜色类，`.fc-${name}`
-- make-button-color($color-map)     生成按钮颜色类，`.btnc-${name}`
+- make-background-color($colorMap) 生成背景色的类     `.x-bg-c-${name}`
+- make-font-color($colorMap)       生成字体颜色类     `.x-font-c-${name}`
+- make-button-color($colorMap)     生成按钮颜色类     `.x-btn-c-${name}`
+- make-tr-color($colorMap)         生成表格行颜色类   `.x-btn-c-${name}`
 
 #### ellipsis
 
 设置文字截断方式
 
-- ellipsis($line-num, $substract)   截断的行数
-
-#### height
-
-设置与高度相关的属性
-
-- l-height($height)      设置行高与高度一致
-
-#### inline
-
-设置与 inline 相关的属性
-
-- inline-size($padding, $line-height, $font-size)        设置 `inline` 的大小
+- ellipsis($lines, $substract)   截断的行数，以及最后缩进距离
 
 #### position
 
@@ -100,18 +89,19 @@
   - x-r-evenly
   - x-r-stretch           以上为 `align-content` 的缩写
 
-#### useFullClass
+#### simple-class
 
 一些常用的类名
 
 - x-b-c                   块居中
-- x-t-r                   文字右排
 - x-t-c                   文字居中
+- x-t-r                   文字右排
+- x-t-l                   文字左排
 - x-f-l                   块左浮动
 - x-f-r                   块右浮动
 - x-p-r                   相对定位元素
 - x-[pm]-[tblr]-[5-30]    提供 `5 - 30` 的 `padding/margin` 各个方向上的简写
-- x-f-s-[12-30]           提供 `12 - 30` 双字号的简写
+- x-font-s-[12-30]           提供 `12 - 30` 双字号的简写
 - x-ellipsis              单行文字溢出 `...`
 
 
